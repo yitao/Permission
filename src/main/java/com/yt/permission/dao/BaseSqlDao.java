@@ -9,28 +9,31 @@ import java.util.Map;
  */
 public interface BaseSqlDao<T, PK extends Serializable> {
 
-    T get(PK id);
-
-    T get(Map<String, Object> query);
+    void insert(T entity);
 
     void delete(PK id);
 
     void delete(PK id, boolean isHardDelete);
 
-    List<T> findAll();
-
-    List<T> findAll(Boolean deleted);
+    void update(T entity);
 
     void save(T entity);
 
-    void insert(T entity);
+    T get(PK id);
 
-    void update(T entity);
+    T get(Map<String, Object> query);
 
     Long count();
+
+    List<T> findAll();
+
+    Long count(Boolean deleted);
+
+    List<T> findAll(Boolean deleted);
 
     Long count(Map<String, Object> query);
 
     List<T> find(Map<String, Object> query);
+
 
 }

@@ -18,6 +18,7 @@ import java.util.UUID;
  * Created by yitao on 2016/5/19.
  */
 public class BaseSqlDaoImpl<T extends BaseDataEntity, PK extends String> extends SqlSessionDaoSupport implements BaseSqlDao<T, PK> {
+
     public static final String SQL_GET_BY_ID = "getById";
     public static final String SQL_GET_BY_MAP = "getByMap";
     public static final String SQL_FIND_ALL = "findAll";
@@ -105,6 +106,11 @@ public class BaseSqlDaoImpl<T extends BaseDataEntity, PK extends String> extends
         } else {
             getSqlSession().delete(className + "." + SQL_DELETE_BY_ID, id);
         }
+    }
+
+    @Override
+    public Long count(Boolean deleted) {
+        return null;
     }
 
     @Override
