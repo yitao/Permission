@@ -11,22 +11,22 @@
       <entry name="!?*.flex" />
       <entry name="!?*.kt" />
       <entry name="!?*.clj" />
-      <entry name="!?*.aj!?*.xml" />
+      <entry name="!?*.aj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for Permission" enabled="true">
+      <profile default="false" name="Annotation profile for permission" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="Permission" />
+        <module name="permission" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
-      <module name="Permission" target="1.6" />
+      <module name="permission" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
