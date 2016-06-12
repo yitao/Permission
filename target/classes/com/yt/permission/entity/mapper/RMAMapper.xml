@@ -3,4 +3,9 @@
 
 <mapper namespace="com.yt.permission.entity.RMA">
 
+    <insert id="insert" parameterType="RMA">
+        INSERT INTO p_rma(id,ctime,`order`,role_id,module_id,action_id)
+        VALUES (#{id},#{ctime},#{order},#{roleId},#{moduleId},#{actionId})
+    </insert>
+
 </mapper>

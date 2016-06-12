@@ -2,7 +2,13 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yt.permission.entity.Role">
+    <insert id="insert" parameterType="Role">
+        INSERT  INTO p_role(id,ctime,`order`,`name`,`desc`,inuse)
+        VALUES (#{id},#{ctime},#{order},#{name},#{desc},#{inuse})
+    </insert>
+
     <select id="findOnyById" parameterType="String" resultType="Role">
-        select * from Role where id = #{id}
+        select * from p_role where id = #{id}
     </select>
+
 </mapper>

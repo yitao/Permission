@@ -51,7 +51,7 @@ public class MapperMaker {
             "    </delete>";
 
     String selectTemplate =
-            "    <select id=\"%ID%\" parameterType=\"java.util.Map\" resultType=\"Account\">\n" +
+            "    <select id=\"%ID%\" parameterType=\"%SELECT_PARAMTYPE%\" resultType=\"%SELECT_RESULTTYPE%\">\n" +
             "        select * from account\n" +
             "        <where>\n" +
             "            1 = 1\n" +

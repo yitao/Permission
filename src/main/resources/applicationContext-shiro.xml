@@ -15,10 +15,11 @@
 		</property>
 	</bean>
 
-
+	<bean id="roleRealm" class="com.yt.permission.shiro.realm.RoleRealm" />
 	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
 		<property name="realms">
 			<list>
+				<ref bean="roleRealm"></ref>
 			</list>
 		</property>
 		<!-- 需要使用cache的话加上这句

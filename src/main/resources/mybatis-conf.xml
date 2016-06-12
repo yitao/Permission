@@ -7,6 +7,8 @@
 		<typeAlias type="com.yt.permission.entity.Action" alias="Action" />
 		<typeAlias type="com.yt.permission.entity.Module" alias="Module" />
 		<typeAlias type="com.yt.permission.entity.Role" alias="Role" />
+		<typeAlias type="com.yt.permission.entity.RMA" alias="RMA" />
+		<typeAlias type="com.yt.permission.entity.AR" alias="AR" />
 
 	</typeAliases>
 
@@ -15,6 +17,8 @@
 		<mapper resource="com/yt/permission/entity/mapper/ActionMapper.xml"/>
 		<mapper resource="com/yt/permission/entity/mapper/ModuleMapper.xml"/>
 		<mapper resource="com/yt/permission/entity/mapper/RoleMapper.xml"/>
-
+		<mapper resource="com/yt/permission/entity/mapper/RMAMapper.xml"/>
+		<mapper resource="com/yt/permission/entity/mapper/ARMapper.xml"/>
 	</mappers>
+
 </configuration>

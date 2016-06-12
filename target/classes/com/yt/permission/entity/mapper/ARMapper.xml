@@ -3,4 +3,8 @@
 
 <mapper namespace="com.yt.permission.entity.AR">
 
+    <insert id="insert" parameterType="AR">
+        INSERT INTO p_ar(id,ctime,`order`,account_id,role_id)
+        VALUES (#{id},#{ctime},#{order},#{accountId},#{roleId})
+    </insert>
 </mapper>

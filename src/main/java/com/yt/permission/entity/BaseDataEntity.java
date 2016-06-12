@@ -13,7 +13,7 @@ import java.util.Date;
 public class BaseDataEntity implements Serializable {
     @Id
     String id;
-    Date ctime;
+    Date ctime = new Date();
     Date mtime;
     long order;
 

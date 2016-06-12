@@ -1,5 +1,7 @@
 package com.yt.permission.entity;
 
+import org.springframework.data.annotation.Transient;
+
 import java.util.List;
 
 /**
@@ -10,6 +12,7 @@ public class Role extends BaseDataEntity{
     String desc;
     boolean inuse;
 
+    @Transient
     List<Module> modules;
 
     public String getName() {

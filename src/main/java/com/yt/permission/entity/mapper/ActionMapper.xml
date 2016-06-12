@@ -2,7 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.yt.permission.entity.Action">
+    <insert id="insert" parameterType="Action">
+        INSERT  INTO p_action(id,ctime,`order`,label,`value`,`action`,hint,module_id)
+        VALUES (#{id},#{ctime},#{order},#{label},#{value},#{action},#{hint},#{moduleId})
+    </insert>
+
     <select id="findOnyById" parameterType="String" resultType="Action">
-        select * from Action where id = #{id}
+        select * from p_action where id = #{id}
     </select>
 </mapper>
