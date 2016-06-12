@@ -4,8 +4,16 @@
 <mapper namespace="com.yt.permission.entity.RMA">
 
     <insert id="insert" parameterType="RMA">
-        INSERT INTO p_rma(id,ctime,`order`,role_id,module_id,action_id)
-        VALUES (#{id},#{ctime},#{order},#{roleId},#{moduleId},#{actionId})
+        INSERT INTO p_rma(role_id,module_id,action_id)
+        VALUES (#{roleId},#{moduleId},#{actionId})
     </insert>
+
+    <delete id="delete" parameterType="RMA">
+        DELETE FROM p_rma WHERE  role_id = #{roleId} AND module_id = #{moduleId} AND action_id = #{actionId}
+    </delete>
+
+    <select id="findRmaByRoleId" parameterType="String" resultType="RMA">
+        select * from p_rma where role_id = #{roleId}
+    </select>
 
 </mapper>

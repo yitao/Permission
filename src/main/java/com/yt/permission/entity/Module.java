@@ -9,6 +9,7 @@ import java.util.List;
  */
 public class Module extends BaseLabelEntity{
     String faModuleId;
+    boolean isDefault;
     @Transient
     List<Module> subModules;
     @Transient
@@ -36,5 +37,13 @@ public class Module extends BaseLabelEntity{
 
     public void setActions(List<Action> actions) {
         this.actions = actions;
+    }
+
+    public boolean isDefault() {
+        return isDefault;
+    }
+
+    public void setDefault(boolean aDefault) {
+        isDefault = aDefault;
     }
 }

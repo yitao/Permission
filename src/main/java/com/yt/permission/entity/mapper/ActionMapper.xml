@@ -10,4 +10,9 @@
     <select id="findOnyById" parameterType="String" resultType="Action">
         select * from p_action where id = #{id}
     </select>
+
+    <select id="findAllByModuleId" parameterType="String" resultType="Action">
+        select * from p_action where module_id = #{moduleId}
+    </select>
+
 </mapper>

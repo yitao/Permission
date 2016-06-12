@@ -37,13 +37,13 @@ public class BaseSqlDaoImpl<T extends BaseDataEntity, PK extends String> extends
 
     public static final String SQL_INSERT_RELATION = "insertRelation";
 
-    private String className;
+    protected String className;
 
     public String getClassName() {
         return className;
     }
 
-    private Class<T> clazz;
+    protected Class<T> clazz;
 
     @PostConstruct
     public void init() {

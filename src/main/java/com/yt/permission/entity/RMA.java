@@ -4,7 +4,7 @@ package com.yt.permission.entity;
  * 角色和 模块（最小）功能之间关系
  * Created by yitao on 2016/5/17.
  */
-public class RMA {
+public class RMA extends BaseDataEntity {
     String roleId;
     String moduleId;
     String actionId;

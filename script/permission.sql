@@ -12,6 +12,8 @@ CREATE TABLE `p_module` (
   `value` varchar(255) NOT NULL,
   `hint` varchar(255) DEFAULT NULL,
   `fa_module_id` varchar(64) DEFAULT NULL,
+  `show` boolean DEFAULT FALSE ,
+  `is_default` boolean DEFAULT FALSE ,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -31,6 +33,7 @@ CREATE TABLE `p_action` (
   `hint` varchar(255) DEFAULT NULL,
   `module_id` varchar(64) NOT NULL,
   `action` varchar(255) NOT NULL,
+  `show` boolean DEFAULT FALSE ,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -46,6 +49,7 @@ CREATE TABLE `p_role` (
   `name` varchar(255) NOT NULL,
   `desc` varchar(255) DEFAULT NULL,
   `inuse` boolean DEFAULT FALSE ,
+  `show` boolean DEFAULT FALSE ,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -62,6 +66,7 @@ CREATE TABLE `p_account` (
   `account` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `inuse` boolean DEFAULT FALSE ,
+  `show` boolean DEFAULT FALSE ,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

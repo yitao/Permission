@@ -16,6 +16,7 @@ public class BaseDataEntity implements Serializable {
     Date ctime = new Date();
     Date mtime;
     long order;
+    boolean show;
 
     @Override
     public String toString() {

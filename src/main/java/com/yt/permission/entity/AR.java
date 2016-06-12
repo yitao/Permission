@@ -4,7 +4,7 @@ package com.yt.permission.entity;
  * 账号 和 角色之间关系
  * Created by yitao on 2016/5/17.
  */
-public class AR {
+public class AR extends BaseDataEntity{
     String accountId;
     String roleId;
 
