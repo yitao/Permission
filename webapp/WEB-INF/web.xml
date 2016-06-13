@@ -33,10 +33,10 @@
 		<filter-name>springSessionRepositoryFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-	<!-- admin shiro -->
+	<!-- role shiro -->
 	<!-- 必须保证顺序在sessionFiler后面 -->
 	<filter>
-		<filter-name>adminShiroFilter</filter-name>
+		<filter-name>roleShiroFilter</filter-name>
 		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
 		<init-param>
 			<param-name>targetFilterLifecycle</param-name>
@@ -44,27 +44,16 @@
 		</init-param>
 	</filter>
 	<filter-mapping>
-		<filter-name>adminShiroFilter</filter-name>
-		<url-pattern>/admin/*</url-pattern>
+		<filter-name>roleShiroFilter</filter-name>
+		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	<!-- 必须保证顺序在sessionFiler后面 -->
-	<!-- company shiro -->
-	<filter>
-		<filter-name>companyShiroFilter</filter-name>
-		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
-		<init-param>
-			<param-name>targetFilterLifecycle</param-name>
-			<param-value>true</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>companyShiroFilter</filter-name>
-		<url-pattern>/company/*</url-pattern>
-	</filter-mapping>
+
 
 	<servlet>
 		<servlet-name>springServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!--<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>-->
+		<servlet-class>com.yt.permission.shiro.servlet.DefaultDispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
 			<param-value>classpath*:spring-mvc.xml</param-value>

@@ -34,6 +34,7 @@ CREATE TABLE `p_action` (
   `module_id` varchar(64) NOT NULL,
   `action` varchar(255) NOT NULL,
   `show` boolean DEFAULT FALSE ,
+  UNIQUE KEY (`action`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -67,6 +68,7 @@ CREATE TABLE `p_account` (
   `password` varchar(255) NOT NULL,
   `inuse` boolean DEFAULT FALSE ,
   `show` boolean DEFAULT FALSE ,
+  UNIQUE KEY (`account`),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

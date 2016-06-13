@@ -10,10 +10,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/admin")
 public class AdminController {
 
+    @RequestMapping("/tologin")
+    public String toLogin(){
+        return "/admin/login";
+    }
+
+    @RequestMapping("/tologout")
+    public String toLogout(){
+        return "/admin/login";
+    }
+
+
     @RequestMapping("/toadd")
     public String toAdd(){
         return "/admin/add";
     }
+
     @RequestMapping("/todelete")
     public String toDelete(){
         return "/admin/delete";

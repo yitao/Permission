@@ -19,15 +19,6 @@
 	<!-- Handles HTTP GET requests for /static/** by efficiently serving up static resources in the ${webappRoot}/static/ directory -->
 	<mvc:resources mapping="/app_static/**" location="/app_static/" />
 
-	<bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
-		<property name="cache" value="true" />
-		<!-- 渲染页面前缀 -->
-		<property name="prefix" value="" />
-		<!-- 渲染页面后缀 -->
-		<property name="suffix" value=".ftl" />
-		<property name="contentType" value="text/html;charset=UTF-8" />
-	</bean>
-
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".html" />

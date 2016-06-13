@@ -10,4 +10,6 @@ import java.util.List;
 public interface ActionDao extends BaseSqlDao<Action, String>{
 
     List<Action> findAllByModuleId(String moduleId);
+
+    Action findOneByAction(String action);
 }

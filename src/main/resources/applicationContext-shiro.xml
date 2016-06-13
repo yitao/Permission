@@ -4,10 +4,17 @@
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans
 	   http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="adminShiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+	<bean id="roleFilter" class="com.yt.permission.shiro.filter.PermissionAuthorization" />
+
+	<bean id="roleShiroFilter" class="com.yt.permission.shiro.bean.PermissionShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" />
 		<property name="loginUrl" value="/admin/login.do" />
 		<property name="unauthorizedUrl" value="/admin/unauthorized.do" />
+		<property name="filters">
+			<map>
+				<entry key="roleFilter" value-ref="roleFilter"/>
+			</map>
+		</property>
 		<property name="filterChainDefinitions">
 			<value>
 				/**=anon

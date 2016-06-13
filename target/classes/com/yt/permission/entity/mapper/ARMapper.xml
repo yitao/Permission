@@ -4,7 +4,12 @@
 <mapper namespace="com.yt.permission.entity.AR">
 
     <insert id="insert" parameterType="AR">
-        INSERT INTO p_ar(id,ctime,`order`,account_id,role_id)
-        VALUES (#{id},#{ctime},#{order},#{accountId},#{roleId})
+        INSERT INTO p_ar(account_id,role_id)
+        VALUES (#{accountId},#{roleId})
     </insert>
+
+    <delete id="delete" parameterType="AR">
+        DELETE FROM p_ar WHERE account_id = #{accountId} AND role_id = #{roleId}
+    </delete>
+
 </mapper>

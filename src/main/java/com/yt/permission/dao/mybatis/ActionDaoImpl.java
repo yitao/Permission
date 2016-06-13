@@ -19,4 +19,10 @@ public class ActionDaoImpl extends BaseSqlDaoImpl<Action,String> implements Acti
         return result;
     }
 
+    @Override
+    public Action findOneByAction(String action) {
+        Action result = null;
+        result = getSqlSession().selectOne(className+".findOneByAction",action);
+        return result;
+    }
 }

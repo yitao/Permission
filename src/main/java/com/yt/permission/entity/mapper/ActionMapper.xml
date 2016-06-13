@@ -15,4 +15,8 @@
         select * from p_action where module_id = #{moduleId}
     </select>
 
+    <select id="findOneByAction" parameterType="String" resultType="Action">
+        select * from p_action where `action` = #{action}
+    </select>
+
 </mapper>
